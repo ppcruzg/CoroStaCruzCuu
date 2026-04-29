@@ -1,0 +1,1400 @@
+2026-04-24T22:12:35.784Z vite:config bundled config file loaded in 41.01ms
+2026-04-24T22:12:35.790Z vite:config using resolved config: {
+  plugins: [
+    'vite:optimized-deps',
+    'vite:watch-package-data',
+    'vite:pre-alias',
+    'alias',
+    'vite:react-babel',
+    'vite:react-refresh',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    'vite:wasm-fallback',
+    'vite:define',
+    'vite:css-post',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'vite:client-inject',
+    'vite:css-analysis',
+    'vite:import-analysis'
+  ],
+  resolve: {
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [],
+    extensions: [
+      '.mjs',  '.js',
+      '.mts',  '.ts',
+      '.jsx',  '.tsx',
+      '.json'
+    ],
+    dedupe: [ 'react', 'react-dom' ],
+    preserveSymlinks: false,
+    alias: [ [Object], [Object], [Object] ]
+  },
+  optimizeDeps: {
+    holdUntilCrawlEnd: true,
+    force: undefined,
+    esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+    include: [
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'react/jsx-runtime'
+    ]
+  },
+  server: {
+    preTransformRequests: true,
+    host: undefined,
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    middlewareMode: false,
+    fs: {
+      strict: true,
+      allow: [Array],
+      deny: [Array],
+      cachedChecks: undefined
+    }
+  },
+  esbuild: { jsxDev: true, jsx: 'automatic', jsxImportSource: undefined },
+  build: {
+    target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    sourcemap: false,
+    rollupOptions: { onwarn: [Function: onwarn] },
+    minify: 'esbuild',
+    terserOptions: {},
+    write: true,
+    emptyOutDir: null,
+    copyPublicDir: true,
+    manifest: false,
+    lib: false,
+    ssr: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    commonjsOptions: { include: [Array], extensions: [Array] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [Array] },
+    modulePreload: { polyfill: true },
+    cssMinify: true
+  },
+  configFile: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/vite.config.ts',
+  configFileDependencies: [ 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/vite.config.ts' ],
+  inlineConfig: {
+    root: undefined,
+    base: undefined,
+    mode: undefined,
+    configFile: undefined,
+    logLevel: undefined,
+    clearScreen: undefined,
+    optimizeDeps: { force: undefined },
+    server: { host: undefined }
+  },
+  root: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu',
+  base: '/',
+  decodedBase: '/',
+  rawBase: '/',
+  publicDir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/public',
+  cacheDir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite',
+  command: 'serve',
+  mode: 'development',
+  ssr: {
+    target: 'node',
+    optimizeDeps: { noDiscovery: true, esbuildOptions: [Object] }
+  },
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: false,
+  css: { lightningcss: undefined },
+  preview: {
+    port: undefined,
+    strictPort: undefined,
+    host: undefined,
+    allowedHosts: undefined,
+    https: undefined,
+    open: undefined,
+    proxy: undefined,
+    cors: undefined,
+    headers: undefined
+  },
+  envDir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu',
+  env: {
+    VITE_SUPABASE_URL: 'http://localhost:54321',
+    VITE_SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummy',
+    BASE_URL: '/',
+    MODE: 'development',
+    DEV: true,
+    PROD: false
+  },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu' => {
+      dir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu',
+      data: [Object],
+      hasSideEffects: [Function: hasSideEffects],
+      webResolvedImports: {},
+      nodeResolvedImports: {},
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  createResolver: [Function: createResolver],
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  appType: 'spa',
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  webSocketToken: 'sKzvGg5CXhc9',
+  additionalAllowedHosts: [],
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks]
+}
+2026-04-24T22:12:35.803Z vite:deps [32mremoving old cache dir C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps[39m
+2026-04-24T22:12:35.808Z vite:resolve [32m1.32ms[39m [36mreact[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/index.js[22m
+2026-04-24T22:12:35.809Z vite:resolve [32m0.58ms[39m [36mreact-dom[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-dom/index.js[22m
+2026-04-24T22:12:35.809Z vite:resolve [32m0.31ms[39m [36mreact/jsx-dev-runtime[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/jsx-dev-runtime.js[22m
+2026-04-24T22:12:35.809Z vite:resolve [32m0.19ms[39m [36mreact/jsx-runtime[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/jsx-runtime.js[22m
+2026-04-24T22:12:35.810Z vite:deps [32mscanning for dependencies...[39m
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m1254[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+2026-04-24T22:12:35.821Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:35.821Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:35.823Z vite:deps Crawling dependencies using entries: 
+  [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/index.html[22m
+2026-04-24T22:12:36.006Z vite:resolve [32m0.18ms[39m [36m/src/main.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/main.tsx[22m
+2026-04-24T22:12:36.009Z vite:resolve [32m0.69ms[39m [36mreact[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/index.js[22m
+2026-04-24T22:12:36.010Z vite:resolve [32m0.37ms[39m [36mreact-dom/client[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-dom/client.js[22m
+2026-04-24T22:12:36.011Z vite:resolve [32m0.25ms[39m [36m./App[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/App.tsx[22m
+2026-04-24T22:12:36.013Z vite:time [32m0.71ms[39m [2m/[22m
+2026-04-24T22:12:36.014Z vite:resolve [32m0.21ms[39m [36mreact/jsx-runtime[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/jsx-runtime.js[22m
+2026-04-24T22:12:36.016Z vite:resolve [32m0.57ms[39m [36mreact-router-dom[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-router-dom/dist/index.js[22m
+2026-04-24T22:12:36.017Z vite:resolve [32m0.50ms[39m [36mlucide-react[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/lucide-react/dist/esm/lucide-react.js[22m
+2026-04-24T22:12:36.017Z vite:resolve [32m0.29ms[39m [36m./lib/supabase[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.018Z vite:resolve [32m0.20ms[39m [36m./components/layout/BottomNav[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:12:36.018Z vite:resolve [32m0.24ms[39m [36m./pages/Songs[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Songs.tsx[22m
+2026-04-24T22:12:36.019Z vite:resolve [32m0.23ms[39m [36m./pages/Sessions[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Sessions.tsx[22m
+2026-04-24T22:12:36.019Z vite:resolve [32m0.22ms[39m [36m./pages/SessionDetail[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:12:36.019Z vite:resolve [32m0.22ms[39m [36m./pages/AdminSongForm[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:12:36.020Z vite:resolve [32m0.18ms[39m [36m./pages/Catalogs[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Catalogs.tsx[22m
+2026-04-24T22:12:36.020Z vite:resolve [32m0.19ms[39m [36m./pages/Login[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Login.tsx[22m
+2026-04-24T22:12:36.022Z vite:resolve [32m0.64ms[39m [36m@supabase/supabase-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/supabase-js/dist/index.mjs[22m
+2026-04-24T22:12:36.023Z vite:resolve [32m0.32ms[39m [36m../lib/supabase[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.024Z vite:resolve [32m0.30ms[39m [36m../components/songs/SongCard[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:12:36.025Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:12:36.036Z vite:time [33m11.76ms[39m [2m/index.html[22m
+2026-04-24T22:12:36.037Z vite:resolve [32m1.57ms[39m [36m/src/main.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/main.tsx[22m
+2026-04-24T22:12:36.038Z vite:load [32m1.13ms[39m [fs] [2m/src/main.tsx[22m
+2026-04-24T22:12:36.164Z vite:resolve [32m0.16ms[39m [36m/@vite/client[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/vite/dist/client/client.mjs[22m
+2026-04-24T22:12:36.166Z vite:load [32m0.17ms[39m [plugin] [2m/@react-refresh[22m
+2026-04-24T22:12:36.170Z vite:import-analysis [32m1.18ms[39m [2m[0 imports rewritten] [2m/@react-refresh[22m[2m[22m
+2026-04-24T22:12:36.170Z vite:transform [32m4.49ms[39m [2m/@react-refresh[22m
+2026-04-24T22:12:36.170Z vite:time [32m4.99ms[39m [2m/@react-refresh[22m
+2026-04-24T22:12:36.178Z vite:resolve [32m0.55ms[39m [36m./App[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/App.tsx[22m
+2026-04-24T22:12:36.178Z vite:resolve [32m0.61ms[39m [36m./index.css[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/index.css[22m
+2026-04-24T22:12:36.179Z vite:load [33m14.41ms[39m [fs] [2m/@vite/client[22m
+2026-04-24T22:12:36.183Z vite:resolve [32m0.12ms[39m [36m@vite/env[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:12:36.184Z vite:import-analysis [32m0.70ms[39m [2m[1 imports rewritten] [2mnode_modules/vite/dist/client/client.mjs[22m[2m[22m
+2026-04-24T22:12:36.184Z vite:transform [32m4.85ms[39m [2m/@vite/client[22m
+2026-04-24T22:12:36.188Z vite:time [33m24.60ms[39m [2m/@vite/client[22m
+2026-04-24T22:12:36.196Z vite:load [33m17.49ms[39m [fs] [2m/src/App.tsx[22m
+2026-04-24T22:12:36.213Z vite:load [33m34.93ms[39m [fs] [2m/src/index.css[22m
+2026-04-24T22:12:36.293Z vite:resolve [32m0.26ms[39m [36m/tailwind.config.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/tailwind.config.js[22m
+2026-04-24T22:12:36.294Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-04-24T22:12:36.294Z vite:import-analysis [32m0.26ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-04-24T22:12:36.294Z vite:transform [31m80.36ms[39m [2m/src/index.css[22m
+2026-04-24T22:12:36.294Z vite:deps Scan completed in 484.20ms: 
+  [36m@supabase/supabase-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/supabase-js/dist/index.mjs[22m
+  [36mlucide-react[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/lucide-react/dist/esm/lucide-react.js[22m
+  [36mreact[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/index.js[22m
+  [36mreact-dom/client[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-dom/client.js[22m
+  [36mreact-router-dom[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-router-dom/dist/index.js[22m
+  [36mreact/jsx-runtime[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/jsx-runtime.js[22m
+2026-04-24T22:12:36.295Z vite:deps [32mcreating package.json in C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps_temp_41d15055[39m
+2026-04-24T22:12:36.296Z vite:resolve [31m119.30ms[39m [36mreact/jsx-dev-runtime[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:12:36.296Z vite:resolve [31m119.33ms[39m [36mreact[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:12:36.296Z vite:resolve [31m119.34ms[39m [36mreact-dom/client[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m
+2026-04-24T22:12:36.297Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.297Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.297Z vite:load [31m113.73ms[39m [fs] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:12:36.297Z vite:import-analysis [32m0.02ms[39m [2m[no imports] [2mnode_modules/vite/dist/client/env.mjs[22m[2m[22m
+2026-04-24T22:12:36.297Z vite:transform [32m0.10ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:12:36.297Z vite:time [32m3.45ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.37ms[39m [36m./lib/supabase[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.42ms[39m [36m./components/layout/BottomNav[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.43ms[39m [36m./pages/Songs[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Songs.tsx[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.44ms[39m [36m./pages/Sessions[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Sessions.tsx[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.45ms[39m [36m./pages/SessionDetail[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.46ms[39m [36m./pages/AdminSongForm[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.46ms[39m [36m./pages/Catalogs[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Catalogs.tsx[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.47ms[39m [36m./pages/Login[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Login.tsx[22m
+2026-04-24T22:12:36.300Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.52ms[39m [36mreact-router-dom[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:12:36.300Z vite:resolve [32m1.53ms[39m [36mlucide-react[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:12:36.301Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.301Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.301Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:36.301Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:36.311Z vite:hmr [self-accepts] [2msrc/App.tsx[22m
+2026-04-24T22:12:36.311Z vite:import-analysis [33m12.60ms[39m [2m[13 imports rewritten] [2msrc/App.tsx[22m[2m[22m
+2026-04-24T22:12:36.314Z vite:transform [31m117.53ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:12:36.314Z vite:import-analysis /node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6 needs interop
+2026-04-24T22:12:36.315Z vite:import-analysis [31m138.15ms[39m [2m[5 imports rewritten] [2msrc/main.tsx[22m[2m[22m
+2026-04-24T22:12:36.315Z vite:transform [31m276.77ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:12:36.315Z vite:time [31m150.07ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:12:36.316Z vite:load [33m15.60ms[39m [fs] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.317Z vite:load [33m15.92ms[39m [fs] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:12:36.323Z vite:load [33m22.40ms[39m [fs] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:12:36.328Z vite:load [33m27.50ms[39m [fs] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:12:36.336Z vite:load [33m35.53ms[39m [fs] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:12:36.338Z vite:load [33m37.64ms[39m [fs] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:12:36.343Z vite:load [33m41.75ms[39m [fs] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:12:36.351Z vite:load [31m50.25ms[39m [fs] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:12:36.360Z vite:cache [memory] [2m/src/App.tsx[22m
+2026-04-24T22:12:36.360Z vite:time [32m0.17ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:12:36.362Z vite:cache [memory] [2m/src/index.css[22m
+2026-04-24T22:12:36.362Z vite:time [32m0.30ms[39m [2m/src/index.css[22m
+2026-04-24T22:12:36.363Z vite:resolve [32m0.05ms[39m [36m@supabase/supabase-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/@supabase_supabase-js.js?v=5cf99f18[22m
+2026-04-24T22:12:36.363Z vite:import-analysis [32m0.46ms[39m [2m[1 imports rewritten] [2msrc/lib/supabase.ts[22m[2m[22m
+2026-04-24T22:12:36.363Z vite:transform [33m47.02ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.366Z vite:resolve [32m0.57ms[39m [36mreact-dom[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-dom/index.js[22m
+2026-04-24T22:12:36.367Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.367Z vite:time [32m0.19ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.369Z vite:resolve [32m0.52ms[39m [36m../lib/supabase[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.369Z vite:resolve [32m0.56ms[39m [36m../components/songs/SongCard[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:12:36.369Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:12:36.369Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.369Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.369Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.369Z vite:hmr [self-accepts] [2msrc/pages/Songs.tsx[22m
+2026-04-24T22:12:36.369Z vite:import-analysis [32m1.21ms[39m [2m[7 imports rewritten] [2msrc/pages/Songs.tsx[22m[2m[22m
+2026-04-24T22:12:36.370Z vite:transform [31m53.03ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:12:36.371Z vite:resolve [32m0.92ms[39m [36m@supabase/functions-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/functions-js/dist/module/index.js[22m
+2026-04-24T22:12:36.373Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:12:36.373Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.373Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.373Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.373Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.373Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.374Z vite:hmr [self-accepts] [2msrc/pages/Sessions.tsx[22m
+2026-04-24T22:12:36.374Z vite:hmr [self-accepts] [2msrc/pages/AdminSongForm.tsx[22m
+2026-04-24T22:12:36.374Z vite:import-analysis [32m1.80ms[39m [2m[6 imports rewritten] [2msrc/pages/Sessions.tsx[22m[2m[22m
+2026-04-24T22:12:36.374Z vite:import-analysis [32m1.83ms[39m [2m[6 imports rewritten] [2msrc/pages/AdminSongForm.tsx[22m[2m[22m
+2026-04-24T22:12:36.375Z vite:transform [31m51.28ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:12:36.375Z vite:transform [33m46.29ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:12:36.376Z vite:resolve [32m0.88ms[39m [36mreact[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/index.js[22m
+2026-04-24T22:12:36.378Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:12:36.378Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:12:36.378Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.378Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.378Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.378Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.378Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.378Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:12:36.378Z vite:hmr [self-accepts] [2msrc/pages/SessionDetail.tsx[22m
+2026-04-24T22:12:36.378Z vite:hmr [self-accepts] [2msrc/pages/Login.tsx[22m
+2026-04-24T22:12:36.378Z vite:hmr [self-accepts] [2msrc/pages/Catalogs.tsx[22m
+2026-04-24T22:12:36.378Z vite:import-analysis [32m1.68ms[39m [2m[7 imports rewritten] [2msrc/pages/SessionDetail.tsx[22m[2m[22m
+2026-04-24T22:12:36.378Z vite:import-analysis [32m1.70ms[39m [2m[5 imports rewritten] [2msrc/pages/Login.tsx[22m[2m[22m
+2026-04-24T22:12:36.378Z vite:import-analysis [32m1.72ms[39m [2m[6 imports rewritten] [2msrc/pages/Catalogs.tsx[22m[2m[22m
+2026-04-24T22:12:36.379Z vite:transform [33m27.89ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:12:36.379Z vite:transform [33m40.50ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:12:36.379Z vite:transform [33m36.44ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:12:36.380Z vite:resolve [32m1.13ms[39m [36mreact[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react/index.js[22m
+2026-04-24T22:12:36.380Z vite:resolve [32m1.16ms[39m [36m@supabase/postgrest-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/postgrest-js/dist/index.mjs[22m
+2026-04-24T22:12:36.381Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:12:36.381Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.381Z vite:hmr [self-accepts] [2msrc/components/layout/BottomNav.tsx[22m
+2026-04-24T22:12:36.381Z vite:import-analysis [32m0.30ms[39m [2m[4 imports rewritten] [2msrc/components/layout/BottomNav.tsx[22m[2m[22m
+2026-04-24T22:12:36.381Z vite:transform [33m44.71ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:12:36.381Z vite:time [33m11.19ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:12:36.383Z vite:resolve [32m1.10ms[39m [36m@supabase/realtime-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/realtime-js/dist/module/index.js[22m
+2026-04-24T22:12:36.383Z vite:resolve [32m1.13ms[39m [36mreact-dom[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-dom/index.js[22m
+2026-04-24T22:12:36.383Z vite:load [33m13.79ms[39m [fs] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:12:36.387Z vite:cache [memory] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:12:36.387Z vite:time [32m0.25ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:12:36.388Z vite:resolve [32m0.79ms[39m [36m@supabase/storage-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/storage-js/dist/index.mjs[22m
+2026-04-24T22:12:36.389Z vite:cache [memory] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:12:36.389Z vite:time [32m0.15ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:12:36.390Z vite:resolve [32m1.02ms[39m [36mreact-router[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/react-router/dist/index.js[22m
+2026-04-24T22:12:36.390Z vite:resolve [32m1.05ms[39m [36m@supabase/auth-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/auth-js/dist/module/index.js[22m
+2026-04-24T22:12:36.391Z vite:cache [memory] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:12:36.391Z vite:time [32m0.22ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:12:36.392Z vite:resolve [32m0.80ms[39m [36m@remix-run/router[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@remix-run/router/dist/router.js[22m
+2026-04-24T22:12:36.392Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:12:36.392Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:12:36.392Z vite:hmr [self-accepts] [2msrc/components/songs/SongCard.tsx[22m
+2026-04-24T22:12:36.392Z vite:import-analysis [32m0.43ms[39m [2m[3 imports rewritten] [2msrc/components/songs/SongCard.tsx[22m[2m[22m
+2026-04-24T22:12:36.393Z vite:transform [32m9.48ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:12:36.393Z vite:cache [memory] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:12:36.393Z vite:time [32m0.17ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:12:36.395Z vite:resolve [32m1.39ms[39m [36mscheduler[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/scheduler/index.js[22m
+2026-04-24T22:12:36.395Z vite:resolve [32m1.42ms[39m [36miceberg-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/iceberg-js/dist/index.mjs[22m
+2026-04-24T22:12:36.395Z vite:cache [memory] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:12:36.395Z vite:time [32m0.15ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:12:36.396Z vite:resolve [32m0.71ms[39m [36mtslib[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/tslib/tslib.es6.mjs[22m
+2026-04-24T22:12:36.397Z vite:cache [memory] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:12:36.397Z vite:time [32m0.20ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:12:36.401Z vite:resolve [32m0.98ms[39m [36m@supabase/phoenix[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/@supabase/phoenix/priv/static/phoenix.mjs[22m
+2026-04-24T22:12:36.447Z vite:deps [32m✨ static imports crawl ended[39m
+2026-04-24T22:12:36.562Z vite:deps Dependencies bundled in 265.35ms
+2026-04-24T22:12:36.562Z vite:deps [32m✨ using post-scan optimizer result, the scanner found every used dependency[39m
+2026-04-24T22:12:36.562Z vite:deps [32mcreating _metadata.json in C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps_temp_41d15055[39m
+2026-04-24T22:12:36.563Z vite:deps [32mrenaming C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps_temp_41d15055 to C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps[39m
+2026-04-24T22:12:36.564Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react_jsx-dev-runtime.js[39m
+2026-04-24T22:12:36.564Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react.js[39m
+2026-04-24T22:12:36.564Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-router-dom.js[39m
+2026-04-24T22:12:36.564Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/lucide-react.js[39m
+2026-04-24T22:12:36.564Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-dom_client.js[39m
+2026-04-24T22:12:36.564Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/@supabase_supabase-js.js[39m
+2026-04-24T22:12:36.564Z vite:deps [32m✨ dependencies optimized[39m
+2026-04-24T22:12:36.564Z vite:load [31m266.91ms[39m [plugin] [2m/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:12:36.565Z vite:resolve [32m0.19ms[39m [36m./chunk-DRWLMN53.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:12:36.565Z vite:resolve [32m0.23ms[39m [36m./chunk-G3PMV62Z.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:12:36.565Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-DRWLMN53.js[39m
+2026-04-24T22:12:36.565Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-G3PMV62Z.js[39m
+2026-04-24T22:12:36.565Z vite:import-analysis [32m0.54ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/react.js?v=45b43dea[22m[2m[22m
+2026-04-24T22:12:36.565Z vite:transform [32m0.70ms[39m [2m/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:12:36.565Z vite:time [31m205.71ms[39m [2m/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:12:36.565Z vite:load [31m267.90ms[39m [plugin] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:12:36.566Z vite:import-analysis [32m0.27ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m[2m[22m
+2026-04-24T22:12:36.566Z vite:transform [32m0.40ms[39m [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:12:36.566Z vite:time [31m206.57ms[39m [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:12:36.566Z vite:load [31m250.85ms[39m [plugin] [2m/node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m
+2026-04-24T22:12:36.566Z vite:resolve [32m0.06ms[39m [36m./chunk-PJEEZAML.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-PJEEZAML.js?v=2c683cc4[22m
+2026-04-24T22:12:36.566Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-PJEEZAML.js[39m
+2026-04-24T22:12:36.566Z vite:import-analysis [32m0.27ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m[2m[22m
+2026-04-24T22:12:36.566Z vite:transform [32m0.33ms[39m [2m/node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m
+2026-04-24T22:12:36.566Z vite:time [31m206.82ms[39m [2m/node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m
+2026-04-24T22:12:36.568Z vite:cache [memory] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:12:36.568Z vite:time [32m0.16ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:12:36.568Z vite:load [31m262.61ms[39m [plugin] [2m/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:12:36.569Z vite:import-analysis [32m1.14ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m[2m[22m
+2026-04-24T22:12:36.569Z vite:transform [32m1.58ms[39m [2m/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:12:36.570Z vite:time [31m205.68ms[39m [2m/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:12:36.571Z vite:load [31m207.59ms[39m [plugin] [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=5cf99f18[22m
+2026-04-24T22:12:36.575Z vite:import-analysis [32m2.67ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/@supabase_supabase-js.js?v=5cf99f18[22m[2m[22m
+2026-04-24T22:12:36.575Z vite:transform [32m4.01ms[39m [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=5cf99f18[22m
+2026-04-24T22:12:36.577Z vite:time [31m178.24ms[39m [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=5cf99f18[22m
+2026-04-24T22:12:36.579Z vite:load [33m14.05ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:12:36.579Z vite:import-analysis [32m0.03ms[39m [2m[no imports] [2mnode_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m[2m[22m
+2026-04-24T22:12:36.579Z vite:transform [32m0.14ms[39m [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:12:36.579Z vite:time [32m0.88ms[39m [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:12:36.579Z vite:load [33m14.46ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:12:36.580Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:12:36.580Z vite:import-analysis [32m0.44ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m[2m[22m
+2026-04-24T22:12:36.580Z vite:transform [32m0.70ms[39m [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:12:36.580Z vite:time [32m2.02ms[39m [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:12:36.580Z vite:load [31m269.18ms[39m [plugin] [2m/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:12:36.585Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:12:36.585Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:12:36.585Z vite:import-analysis [32m3.36ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m[2m[22m
+2026-04-24T22:12:36.586Z vite:transform [32m5.07ms[39m [2m/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:12:36.587Z vite:time [31m222.72ms[39m [2m/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:12:36.589Z vite:load [33m22.76ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=2c683cc4[22m
+2026-04-24T22:12:36.594Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:12:36.594Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:12:36.594Z vite:import-analysis [32m3.49ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-PJEEZAML.js?v=2c683cc4[22m[2m[22m
+2026-04-24T22:12:36.594Z vite:transform [32m5.57ms[39m [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=2c683cc4[22m
+2026-04-24T22:12:36.597Z vite:time [33m18.31ms[39m [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=2c683cc4[22m
+2026-04-24T22:12:36.617Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:36.618Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:36.643Z vite:time [32m1.00ms[39m [2m/vite.svg[22m
+2026-04-24T22:12:36.961Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:36.961Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:37.368Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:37.368Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:37.772Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:37.772Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:38.177Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:38.177Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:38.566Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:38.566Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:38.958Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:38.958Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:39.364Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:39.364Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:39.769Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:39.769Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:40.174Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:40.174Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:40.580Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:40.580Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:40.984Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:40.984Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:41.389Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:41.389Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:41.791Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:41.791Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:42.183Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:42.183Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:42.587Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:42.587Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:43.012Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:43.012Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:43.416Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:43.416Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:43.821Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:43.821Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:44.212Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:44.212Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:44.617Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:44.617Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:45.007Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:45.007Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:45.432Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:45.432Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:45.835Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:45.835Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:46.238Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:46.238Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:46.641Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:46.641Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:47.046Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:47.046Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:47.450Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:47.450Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:47.852Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:47.852Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:48.258Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:48.258Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:48.663Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:48.663Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:49.066Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:49.066Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:49.470Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:49.470Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:49.873Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:49.873Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:50.275Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:50.275Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:12:50.666Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:12:50.666Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:16:49.047Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:16:49.048Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:16:49.049Z vite:time [32m2.52ms[39m [2m/index.html[22m
+2026-04-24T22:16:49.063Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:16:49.063Z vite:time [32m0.29ms[39m [2m/@vite/client[22m
+2026-04-24T22:16:49.064Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:16:49.064Z vite:time [32m0.11ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:16:49.064Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:16:49.064Z vite:time [32m0.04ms[39m [2m/@react-refresh[22m
+2026-04-24T22:16:49.066Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:49.066Z vite:time [32m0.10ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:49.066Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:16:49.066Z vite:time [32m0.04ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:16:49.067Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:16:49.067Z vite:time [32m0.12ms[39m [2m/src/index.css[22m
+2026-04-24T22:16:49.069Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:49.069Z vite:time [32m0.07ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:49.070Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:49.070Z vite:time [32m0.05ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:49.070Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:49.070Z vite:time [32m0.04ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:49.070Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:49.070Z vite:time [32m0.05ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:49.071Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:49.071Z vite:time [32m0.05ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:49.071Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:49.071Z vite:time [32m0.04ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:49.072Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:49.072Z vite:time [32m0.08ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:49.073Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:49.073Z vite:time [32m0.04ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:49.074Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:49.074Z vite:time [32m0.07ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:49.101Z vite:time [32m0.41ms[39m [2m/vite.svg[22m
+2026-04-24T22:16:50.525Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:16:50.526Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:16:50.526Z vite:time [32m1.59ms[39m [2m/index.html[22m
+2026-04-24T22:16:50.538Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:16:50.538Z vite:time [32m0.22ms[39m [2m/@vite/client[22m
+2026-04-24T22:16:50.539Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:16:50.539Z vite:time [32m0.06ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:16:50.540Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:16:50.540Z vite:time [32m0.03ms[39m [2m/@react-refresh[22m
+2026-04-24T22:16:50.540Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:50.540Z vite:time [32m0.06ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:50.541Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:16:50.541Z vite:time [32m0.09ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:16:50.541Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:16:50.541Z vite:time [32m0.07ms[39m [2m/src/index.css[22m
+2026-04-24T22:16:50.543Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:50.543Z vite:time [32m0.06ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:50.543Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:50.543Z vite:time [32m0.20ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:50.543Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:50.543Z vite:time [32m0.04ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:50.544Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:50.544Z vite:time [32m0.03ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:50.544Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:50.544Z vite:time [32m0.03ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:50.544Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:50.544Z vite:time [32m0.03ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:50.544Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:50.544Z vite:time [32m0.05ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:50.545Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:50.545Z vite:time [32m0.04ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:50.546Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:50.546Z vite:time [32m0.13ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:50.556Z vite:time [32m0.26ms[39m [2m/vite.svg[22m
+2026-04-24T22:16:51.404Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:16:51.405Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:16:51.405Z vite:time [32m1.69ms[39m [2m/index.html[22m
+2026-04-24T22:16:51.416Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:16:51.416Z vite:time [32m0.52ms[39m [2m/@vite/client[22m
+2026-04-24T22:16:51.417Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:16:51.417Z vite:time [32m0.05ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:16:51.417Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:16:51.417Z vite:time [32m0.03ms[39m [2m/@react-refresh[22m
+2026-04-24T22:16:51.418Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:51.418Z vite:time [32m0.06ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:51.418Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:16:51.418Z vite:time [32m0.03ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:16:51.419Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:16:51.419Z vite:time [32m0.05ms[39m [2m/src/index.css[22m
+2026-04-24T22:16:51.420Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:51.420Z vite:time [32m0.05ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:51.421Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:51.421Z vite:time [32m0.05ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:51.421Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:51.421Z vite:time [32m0.05ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:51.421Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:51.421Z vite:time [32m0.04ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:51.421Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:51.421Z vite:time [32m0.02ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:51.421Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:51.421Z vite:time [32m0.02ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:51.421Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:51.421Z vite:time [32m0.02ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:51.421Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:51.421Z vite:time [32m0.05ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:51.422Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:51.422Z vite:time [32m0.08ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:51.432Z vite:time [32m0.26ms[39m [2m/vite.svg[22m
+2026-04-24T22:16:51.649Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:16:51.650Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:16:51.651Z vite:time [32m1.34ms[39m [2m/index.html[22m
+2026-04-24T22:16:51.661Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:16:51.661Z vite:time [32m0.19ms[39m [2m/@vite/client[22m
+2026-04-24T22:16:51.661Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:16:51.661Z vite:time [32m0.04ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:16:51.662Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:16:51.662Z vite:time [32m0.04ms[39m [2m/@react-refresh[22m
+2026-04-24T22:16:51.664Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:51.664Z vite:time [32m0.10ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:51.664Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:16:51.664Z vite:time [32m0.04ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:16:51.664Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:16:51.664Z vite:time [32m0.06ms[39m [2m/src/index.css[22m
+2026-04-24T22:16:51.667Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:51.667Z vite:time [32m0.06ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:51.668Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:51.668Z vite:time [32m0.03ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:51.668Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:51.668Z vite:time [32m0.02ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:51.668Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:51.668Z vite:time [32m0.04ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:51.668Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:51.668Z vite:time [32m0.03ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:51.668Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:51.668Z vite:time [32m0.03ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:51.669Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:51.669Z vite:time [32m0.02ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:51.669Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:51.669Z vite:time [32m0.02ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:51.669Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:51.669Z vite:time [32m0.05ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:51.680Z vite:time [32m0.53ms[39m [2m/vite.svg[22m
+2026-04-24T22:16:51.874Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:16:51.876Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:16:51.876Z vite:time [32m1.81ms[39m [2m/index.html[22m
+2026-04-24T22:16:51.886Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:16:51.886Z vite:time [32m0.20ms[39m [2m/@vite/client[22m
+2026-04-24T22:16:51.887Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:16:51.887Z vite:time [32m0.06ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:16:51.887Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:16:51.887Z vite:time [32m0.04ms[39m [2m/@react-refresh[22m
+2026-04-24T22:16:51.888Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:51.888Z vite:time [32m0.06ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:16:51.888Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:16:51.888Z vite:time [32m0.06ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:16:51.889Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:16:51.889Z vite:time [32m0.08ms[39m [2m/src/index.css[22m
+2026-04-24T22:16:51.890Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:51.890Z vite:time [32m0.05ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:16:51.890Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:51.890Z vite:time [32m0.03ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:16:51.890Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:51.890Z vite:time [32m0.03ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:16:51.890Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:51.890Z vite:time [32m0.02ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:16:51.890Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:51.890Z vite:time [32m0.02ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:16:51.891Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:51.891Z vite:time [32m0.04ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:16:51.891Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:51.891Z vite:time [32m0.03ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:16:51.891Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:51.891Z vite:time [32m0.04ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:16:51.892Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:51.892Z vite:time [32m0.05ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:16:51.902Z vite:time [32m0.26ms[39m [2m/vite.svg[22m
+2026-04-24T22:17:13.688Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:17:13.689Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:17:13.689Z vite:time [32m1.80ms[39m [2m/index.html[22m
+2026-04-24T22:17:13.702Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:17:13.703Z vite:time [32m0.21ms[39m [2m/@vite/client[22m
+2026-04-24T22:17:13.703Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:17:13.703Z vite:time [32m0.05ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:17:13.704Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:17:13.704Z vite:time [32m0.03ms[39m [2m/@react-refresh[22m
+2026-04-24T22:17:13.704Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:17:13.704Z vite:time [32m0.05ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:17:13.705Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:17:13.705Z vite:time [32m0.05ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:17:13.705Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:17:13.705Z vite:time [32m0.08ms[39m [2m/src/index.css[22m
+2026-04-24T22:17:13.706Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:17:13.706Z vite:time [32m0.05ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:17:13.706Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:17:13.706Z vite:time [32m0.03ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:17:13.707Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:17:13.707Z vite:time [32m0.04ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:17:13.707Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:17:13.707Z vite:time [32m0.02ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:17:13.707Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:17:13.707Z vite:time [32m0.04ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:17:13.707Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:17:13.707Z vite:time [32m0.03ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:17:13.708Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:17:13.708Z vite:time [32m0.07ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:17:13.708Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:17:13.708Z vite:time [32m0.02ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:17:13.710Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:17:13.710Z vite:time [32m0.04ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:17:13.719Z vite:time [32m0.27ms[39m [2m/vite.svg[22m
+2026-04-24T22:17:15.363Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:17:15.364Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:17:15.364Z vite:time [32m1.25ms[39m [2m/index.html[22m
+2026-04-24T22:17:15.376Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:17:15.376Z vite:time [32m0.24ms[39m [2m/@vite/client[22m
+2026-04-24T22:17:15.377Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:17:15.377Z vite:time [32m0.06ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:17:15.377Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:17:15.377Z vite:time [32m0.05ms[39m [2m/@react-refresh[22m
+2026-04-24T22:17:15.377Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:17:15.377Z vite:time [32m0.05ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:17:15.378Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:17:15.378Z vite:time [32m0.05ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:17:15.378Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:17:15.378Z vite:time [32m0.09ms[39m [2m/src/index.css[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.05ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.03ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.02ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.02ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.02ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.02ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.02ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:17:15.380Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:17:15.380Z vite:time [32m0.02ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:17:15.382Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:17:15.382Z vite:time [32m0.04ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:17:15.391Z vite:time [32m0.25ms[39m [2m/vite.svg[22m
+2026-04-24T22:17:18.288Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:17:18.289Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:17:18.289Z vite:time [32m1.53ms[39m [2m/index.html[22m
+2026-04-24T22:17:18.301Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:17:18.301Z vite:time [32m0.19ms[39m [2m/@vite/client[22m
+2026-04-24T22:17:18.301Z vite:cache [304] [2m/src/main.tsx[22m
+2026-04-24T22:17:18.301Z vite:time [32m0.03ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:17:18.301Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:17:18.301Z vite:time [32m0.02ms[39m [2m/@react-refresh[22m
+2026-04-24T22:17:18.302Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:17:18.302Z vite:time [32m0.06ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:17:18.302Z vite:cache [304] [2m/src/App.tsx[22m
+2026-04-24T22:17:18.302Z vite:time [32m0.03ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:17:18.303Z vite:cache [304] [2m/src/index.css[22m
+2026-04-24T22:17:18.303Z vite:time [32m0.05ms[39m [2m/src/index.css[22m
+2026-04-24T22:17:18.304Z vite:cache [304] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:17:18.304Z vite:time [32m0.08ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:17:18.304Z vite:cache [304] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:17:18.304Z vite:time [32m0.03ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:17:18.304Z vite:cache [304] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:17:18.304Z vite:time [32m0.02ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:17:18.304Z vite:cache [304] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:17:18.304Z vite:time [32m0.03ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:17:18.305Z vite:cache [304] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:17:18.305Z vite:time [32m0.02ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:17:18.305Z vite:cache [304] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:17:18.305Z vite:time [32m0.02ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:17:18.305Z vite:cache [304] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:17:18.305Z vite:time [32m0.08ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:17:18.306Z vite:cache [304] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:17:18.306Z vite:time [32m0.05ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:17:18.306Z vite:cache [304] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:17:18.307Z vite:time [32m0.04ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:17:18.315Z vite:time [32m0.27ms[39m [2m/vite.svg[22m
+2026-04-24T22:17:58.813Z vite:hmr [file change] [2msrc/index.css[22m
+[2m4:17:58 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-04-24T22:17:58.822Z vite:load [32m0.32ms[39m [fs] [2m/src/index.css[22m
+[33m[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+3  |  @tailwind utilities;
+4  |  
+5  |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6  |  
+7  |  * {[39m
+2026-04-24T22:17:58.899Z vite:resolve [32m0.23ms[39m [36m/index.html[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/index.html[22m
+2026-04-24T22:17:58.900Z vite:resolve [32m0.16ms[39m [36m/src/types/index.ts[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/types/index.ts[22m
+2026-04-24T22:17:58.900Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-04-24T22:17:58.900Z vite:import-analysis [32m0.17ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-04-24T22:17:58.900Z vite:transform [31m78.31ms[39m [2m/src/index.css[22m
+2026-04-24T22:17:58.900Z vite:time [31m78.91ms[39m [2m/src/index.css[22m
+2026-04-24T22:18:07.935Z vite:hmr [file change] [2msrc/pages/AdminSongForm.tsx[22m
+[2m4:18:07 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AdminSongForm.tsx, /src/index.css[22m
+2026-04-24T22:18:07.939Z vite:load [32m0.49ms[39m [fs] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:18:07.951Z vite:load [33m11.76ms[39m [fs] [2m/src/index.css[22m
+2026-04-24T22:18:07.954Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:18:07.954Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:18:07.954Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea needs interop
+2026-04-24T22:18:07.954Z vite:import-analysis /node_modules/.vite/deps/react.js?v=45b43dea needs interop
+2026-04-24T22:18:07.954Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:18:07.954Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:18:07.954Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:18:07.954Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:18:07.954Z vite:hmr [self-accepts] [2msrc/pages/AdminSongForm.tsx[22m
+2026-04-24T22:18:07.954Z vite:import-analysis [32m0.84ms[39m [2m[6 imports rewritten] [2msrc/pages/AdminSongForm.tsx[22m[2m[22m
+2026-04-24T22:18:07.956Z vite:transform [33m16.28ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:18:07.956Z vite:time [33m17.08ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+[33m[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+3  |  @tailwind utilities;
+4  |  
+5  |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6  |  
+7  |  * {[39m
+2026-04-24T22:18:07.967Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-04-24T22:18:07.967Z vite:import-analysis [32m0.29ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-04-24T22:18:07.967Z vite:transform [33m16.26ms[39m [2m/src/index.css[22m
+2026-04-24T22:18:07.967Z vite:time [33m28.21ms[39m [2m/src/index.css[22m
+2026-04-24T22:22:27.165Z vite:hmr [file change] [2msupabase/migrations/02_seed.sql[22m
+2026-04-24T22:22:27.165Z vite:hmr [no modules matched] [2msupabase/migrations/02_seed.sql[22m
+2026-04-24T22:22:30.415Z vite:time [32m0.16ms[39m [2m/[22m
+2026-04-24T22:22:30.435Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:22:30.438Z vite:cache [memory-hmr] [2m/src/main.tsx[22m
+2026-04-24T22:22:30.438Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:22:30.438Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:22:30.438Z vite:cache [memory] [2m/node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m
+2026-04-24T22:22:30.438Z vite:cache [memory] [2m/src/index.css[22m
+2026-04-24T22:22:30.439Z vite:cache [memory-hmr] [2m/src/App.tsx[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:22:30.439Z vite:cache [memory] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:22:30.439Z vite:time [32m3.81ms[39m [2m/index.html[22m
+2026-04-24T22:22:30.448Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:22:30.448Z vite:time [32m0.28ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:22:30.448Z vite:cache [memory] [2m/@vite/client[22m
+2026-04-24T22:22:30.453Z vite:time [32m4.60ms[39m [2m/@vite/client[22m
+2026-04-24T22:22:30.454Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:22:30.454Z vite:time [32m0.12ms[39m [2m/@react-refresh[22m
+2026-04-24T22:22:30.456Z vite:cache [memory] [2m/src/App.tsx[22m
+2026-04-24T22:22:30.456Z vite:time [32m0.27ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:22:30.456Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:22:30.456Z vite:time [32m0.15ms[39m [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=45b43dea[22m
+2026-04-24T22:22:30.457Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:22:30.457Z vite:time [32m0.07ms[39m [2m/node_modules/.vite/deps/react.js?v=45b43dea[22m
+2026-04-24T22:22:30.457Z vite:cache [memory] [2m/node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m
+2026-04-24T22:22:30.457Z vite:time [32m0.06ms[39m [2m/node_modules/.vite/deps/react-dom_client.js?v=9b33ffb6[22m
+2026-04-24T22:22:30.457Z vite:cache [memory] [2m/src/index.css[22m
+2026-04-24T22:22:30.457Z vite:time [32m0.13ms[39m [2m/src/index.css[22m
+2026-04-24T22:22:30.458Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:22:30.458Z vite:time [32m0.24ms[39m [2m/node_modules/.vite/deps/react-router-dom.js?v=8d721a98[22m
+2026-04-24T22:22:30.459Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:22:30.459Z vite:time [32m0.06ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:22:30.459Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:22:30.460Z vite:time [32m0.94ms[39m [2m/node_modules/.vite/deps/lucide-react.js?v=91a5dbf4[22m
+2026-04-24T22:22:30.461Z vite:cache [memory] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:22:30.461Z vite:time [32m0.19ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:22:30.462Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:22:30.462Z vite:time [32m0.11ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:22:30.462Z vite:cache [memory] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:22:30.462Z vite:time [32m0.09ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:22:30.462Z vite:cache [memory] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:22:30.462Z vite:time [32m0.11ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:22:30.463Z vite:cache [memory] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:22:30.463Z vite:time [32m0.08ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:22:30.464Z vite:cache [memory] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:22:30.464Z vite:time [32m0.53ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:22:30.464Z vite:cache [memory] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:22:30.464Z vite:time [32m0.21ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:22:30.466Z vite:cache [memory] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:22:30.466Z vite:time [32m0.24ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:22:30.467Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:22:30.467Z vite:time [32m0.25ms[39m [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=2c683cc4[22m
+2026-04-24T22:22:30.468Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:22:30.468Z vite:time [32m0.20ms[39m [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=2c683cc4[22m
+2026-04-24T22:22:30.468Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=2c683cc4[22m
+2026-04-24T22:22:30.470Z vite:time [32m1.42ms[39m [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=2c683cc4[22m
+2026-04-24T22:22:30.474Z vite:cache [memory] [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=5cf99f18[22m
+2026-04-24T22:22:30.474Z vite:time [32m0.48ms[39m [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=5cf99f18[22m
+2026-04-24T22:22:30.477Z vite:cache [memory] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:22:30.477Z vite:time [32m0.39ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:22:30.518Z vite:time [32m0.44ms[39m [2m/vite.svg[22m
+2026-04-24T22:25:18.553Z vite:hmr [config change] [2m.env.local[22m
+[2m4:25:18 PM[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+2026-04-24T22:25:18.564Z vite:config bundled config file loaded in 11.06ms
+2026-04-24T22:25:18.569Z vite:config using resolved config: {
+  plugins: [
+    'vite:optimized-deps',
+    'vite:watch-package-data',
+    'vite:pre-alias',
+    'alias',
+    'vite:react-babel',
+    'vite:react-refresh',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    'vite:wasm-fallback',
+    'vite:define',
+    'vite:css-post',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'vite:client-inject',
+    'vite:css-analysis',
+    'vite:import-analysis'
+  ],
+  resolve: {
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [],
+    extensions: [
+      '.mjs',  '.js',
+      '.mts',  '.ts',
+      '.jsx',  '.tsx',
+      '.json'
+    ],
+    dedupe: [ 'react', 'react-dom' ],
+    preserveSymlinks: false,
+    alias: [ [Object], [Object], [Object] ]
+  },
+  optimizeDeps: {
+    holdUntilCrawlEnd: true,
+    force: undefined,
+    esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+    include: [
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'react/jsx-runtime'
+    ]
+  },
+  server: {
+    preTransformRequests: true,
+    host: undefined,
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    middlewareMode: false,
+    fs: {
+      strict: true,
+      allow: [Array],
+      deny: [Array],
+      cachedChecks: undefined
+    }
+  },
+  esbuild: { jsxDev: true, jsx: 'automatic', jsxImportSource: undefined },
+  build: {
+    target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    sourcemap: false,
+    rollupOptions: { onwarn: [Function: onwarn] },
+    minify: 'esbuild',
+    terserOptions: {},
+    write: true,
+    emptyOutDir: null,
+    copyPublicDir: true,
+    manifest: false,
+    lib: false,
+    ssr: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    commonjsOptions: { include: [Array], extensions: [Array] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [Array] },
+    modulePreload: { polyfill: true },
+    cssMinify: true
+  },
+  configFile: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/vite.config.ts',
+  configFileDependencies: [ 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/vite.config.ts' ],
+  inlineConfig: {
+    root: undefined,
+    base: undefined,
+    mode: undefined,
+    configFile: undefined,
+    logLevel: undefined,
+    clearScreen: undefined,
+    optimizeDeps: { force: undefined },
+    server: { host: undefined }
+  },
+  root: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu',
+  base: '/',
+  decodedBase: '/',
+  rawBase: '/',
+  publicDir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/public',
+  cacheDir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite',
+  command: 'serve',
+  mode: 'development',
+  ssr: {
+    target: 'node',
+    optimizeDeps: { noDiscovery: true, esbuildOptions: [Object] }
+  },
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: false,
+  css: { lightningcss: undefined },
+  preview: {
+    port: undefined,
+    strictPort: undefined,
+    host: undefined,
+    allowedHosts: undefined,
+    https: undefined,
+    open: undefined,
+    proxy: undefined,
+    cors: undefined,
+    headers: undefined
+  },
+  envDir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu',
+  env: {
+    VITE_SUPABASE_URL: 'https://ddzbmtyqqklqdvekjjkl.supabase.co',
+    VITE_SUPABASE_ANON_KEY: 'sb_publishable_706yHx5QxiNwVFetZ1kruA_C_vM4Fns',
+    BASE_URL: '/',
+    MODE: 'development',
+    DEV: true,
+    PROD: false
+  },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu' => {
+      dir: 'C:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu',
+      data: [Object],
+      hasSideEffects: [Function: hasSideEffects],
+      webResolvedImports: {},
+      nodeResolvedImports: {},
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  createResolver: [Function: createResolver],
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  appType: 'spa',
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  webSocketToken: '0BtMKaiX93ku',
+  additionalAllowedHosts: [],
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks]
+}
+2026-04-24T22:25:18.570Z vite:hmr [file change] [2mvite.config.ts.timestamp-1777069518561-113cdcad91e41.mjs[22m
+2026-04-24T22:25:18.570Z vite:hmr [no modules matched] [2mvite.config.ts.timestamp-1777069518561-113cdcad91e41.mjs[22m
+2026-04-24T22:25:18.580Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:18.580Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:18.582Z vite:deps Hash is consistent. Skipping. Use --force to override.
+[2m4:25:18 PM[22m [36m[1m[vite][22m[39m server restarted.
+2026-04-24T22:25:18.839Z vite:time [32m0.18ms[39m [2m/[22m
+2026-04-24T22:25:18.840Z vite:time [32m0.02ms[39m [2m/[22m
+2026-04-24T22:25:18.848Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:25:18.848Z vite:html-fallback Rewriting GET / to /index.html
+2026-04-24T22:25:18.849Z vite:time [32m1.92ms[39m [2m/index.html[22m
+2026-04-24T22:25:18.850Z vite:resolve [32m0.52ms[39m [36m/src/main.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/main.tsx[22m
+2026-04-24T22:25:18.850Z vite:time [32m2.17ms[39m [2m/index.html[22m
+2026-04-24T22:25:18.851Z vite:load [32m0.81ms[39m [fs] [2m/src/main.tsx[22m
+2026-04-24T22:25:18.857Z vite:resolve [32m1.48ms[39m [36m./App[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/App.tsx[22m
+2026-04-24T22:25:18.857Z vite:resolve [32m1.68ms[39m [36m./index.css[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/index.css[22m
+2026-04-24T22:25:18.858Z vite:resolve [32m1.75ms[39m [36mreact/jsx-dev-runtime[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.858Z vite:resolve [32m1.73ms[39m [36mreact[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.858Z vite:resolve [32m1.75ms[39m [36mreact-dom/client[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m
+2026-04-24T22:25:18.858Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:18.858Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:18.858Z vite:import-analysis /node_modules/.vite/deps/react-dom_client.js?v=1ecf975f needs interop
+2026-04-24T22:25:18.858Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react_jsx-dev-runtime.js[39m
+2026-04-24T22:25:18.859Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react.js[39m
+2026-04-24T22:25:18.859Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-dom_client.js[39m
+2026-04-24T22:25:18.859Z vite:import-analysis [32m3.17ms[39m [2m[5 imports rewritten] [2msrc/main.tsx[22m[2m[22m
+2026-04-24T22:25:18.859Z vite:transform [32m8.33ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:25:18.860Z vite:load [32m1.18ms[39m [plugin] [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.860Z vite:resolve [32m0.20ms[39m [36m./chunk-DRWLMN53.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.860Z vite:resolve [32m0.22ms[39m [36m./chunk-G3PMV62Z.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.860Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-DRWLMN53.js[39m
+2026-04-24T22:25:18.861Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-G3PMV62Z.js[39m
+2026-04-24T22:25:18.861Z vite:import-analysis [32m0.61ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/react.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:18.861Z vite:transform [32m0.89ms[39m [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.861Z vite:load [32m2.31ms[39m [fs] [2m/src/index.css[22m
+[33m[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+3  |  @tailwind utilities;
+4  |  
+5  |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6  |  
+7  |  * {[39m
+2026-04-24T22:25:18.878Z vite:resolve [32m0.27ms[39m [36m/index.html[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/index.html[22m
+2026-04-24T22:25:18.879Z vite:resolve [32m0.21ms[39m [36m/src/lib/supabase.ts[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/lib/supabase.ts[22m
+2026-04-24T22:25:18.879Z vite:resolve [32m0.13ms[39m [36m/src/types/index.ts[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/types/index.ts[22m
+2026-04-24T22:25:18.879Z vite:resolve [32m0.11ms[39m [36m/src/pages/AdminSongForm.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:18.879Z vite:resolve [32m0.29ms[39m [36m/src/pages/Catalogs.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:18.880Z vite:resolve [32m0.11ms[39m [36m/src/pages/Login.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Login.tsx[22m
+2026-04-24T22:25:18.880Z vite:resolve [32m0.12ms[39m [36m/src/pages/SessionDetail.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:18.880Z vite:resolve [32m0.11ms[39m [36m/src/pages/Sessions.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Sessions.tsx[22m
+2026-04-24T22:25:18.880Z vite:resolve [32m0.09ms[39m [36m/src/pages/Songs.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Songs.tsx[22m
+2026-04-24T22:25:18.880Z vite:resolve [32m0.12ms[39m [36m/src/components/layout/BottomNav.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:18.880Z vite:resolve [32m0.10ms[39m [36m/src/components/songs/SongCard.tsx[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:18.880Z vite:resolve [32m0.09ms[39m [36m/tailwind.config.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/tailwind.config.js[22m
+2026-04-24T22:25:18.880Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-04-24T22:25:18.881Z vite:import-analysis [32m0.13ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-04-24T22:25:18.881Z vite:transform [33m19.85ms[39m [2m/src/index.css[22m
+2026-04-24T22:25:18.881Z vite:load [33m22.43ms[39m [fs] [2m/src/App.tsx[22m
+2026-04-24T22:25:18.886Z vite:load [33m27.90ms[39m [plugin] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.887Z vite:import-analysis [32m0.32ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:18.887Z vite:transform [32m0.47ms[39m [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.887Z vite:load [33m28.42ms[39m [plugin] [2m/node_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m
+2026-04-24T22:25:18.887Z vite:resolve [32m0.05ms[39m [36m./chunk-PJEEZAML.js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-PJEEZAML.js?v=1ecf975f[22m
+2026-04-24T22:25:18.887Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/chunk-PJEEZAML.js[39m
+2026-04-24T22:25:18.887Z vite:import-analysis [32m0.21ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:18.887Z vite:transform [32m0.26ms[39m [2m/node_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m
+2026-04-24T22:25:18.888Z vite:resolve [32m0.07ms[39m [36m/@vite/client[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/vite/dist/client/client.mjs[22m
+2026-04-24T22:25:18.889Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:25:18.889Z vite:time [32m0.17ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:25:18.890Z vite:load [32m0.86ms[39m [plugin] [2m/@react-refresh[22m
+2026-04-24T22:25:18.891Z vite:import-analysis [32m0.20ms[39m [2m[0 imports rewritten] [2m/@react-refresh[22m[2m[22m
+2026-04-24T22:25:18.891Z vite:transform [32m0.48ms[39m [2m/@react-refresh[22m
+2026-04-24T22:25:18.891Z vite:time [32m1.56ms[39m [2m/@react-refresh[22m
+2026-04-24T22:25:18.891Z vite:cache [memory] [2m/src/main.tsx[22m
+2026-04-24T22:25:18.891Z vite:time [32m0.12ms[39m [2m/src/main.tsx[22m
+2026-04-24T22:25:18.891Z vite:cache [304] [2m/@react-refresh[22m
+2026-04-24T22:25:18.891Z vite:time [32m0.03ms[39m [2m/@react-refresh[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m1.92ms[39m [36m./lib/supabase[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/lib/supabase.ts[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.01ms[39m [36m./components/layout/BottomNav[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.02ms[39m [36m./pages/Songs[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Songs.tsx[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.03ms[39m [36m./pages/Sessions[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Sessions.tsx[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.04ms[39m [36m./pages/SessionDetail[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.05ms[39m [36m./pages/AdminSongForm[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.06ms[39m [36m./pages/Catalogs[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.06ms[39m [36m./pages/Login[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/pages/Login.tsx[22m
+2026-04-24T22:25:18.894Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.17ms[39m [36mreact-router-dom[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:18.894Z vite:resolve [32m2.23ms[39m [36mlucide-react[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.894Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:18.895Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:18.895Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.895Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.895Z vite:hmr [self-accepts] [2msrc/App.tsx[22m
+2026-04-24T22:25:18.895Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/react-router-dom.js[39m
+2026-04-24T22:25:18.895Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/lucide-react.js[39m
+2026-04-24T22:25:18.895Z vite:import-analysis [32m3.54ms[39m [2m[13 imports rewritten] [2msrc/App.tsx[22m[2m[22m
+2026-04-24T22:25:18.896Z vite:transform [33m15.16ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:25:18.897Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.897Z vite:time [32m0.20ms[39m [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.897Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.897Z vite:time [32m0.12ms[39m [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.898Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.898Z vite:time [32m0.24ms[39m [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:18.898Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.898Z vite:time [32m0.08ms[39m [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:18.899Z vite:cache [memory] [2m/node_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m
+2026-04-24T22:25:18.899Z vite:time [32m0.10ms[39m [2m/node_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m
+2026-04-24T22:25:18.899Z vite:cache [memory] [2m/src/App.tsx[22m
+2026-04-24T22:25:18.899Z vite:time [32m0.11ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:25:18.899Z vite:load [33m38.78ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.899Z vite:import-analysis [32m0.04ms[39m [2m[no imports] [2mnode_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:18.900Z vite:transform [32m0.26ms[39m [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.900Z vite:load [33m39.17ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.900Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.901Z vite:import-analysis [32m0.70ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:18.901Z vite:transform [32m1.00ms[39m [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.908Z vite:cache [memory] [2m/src/index.css[22m
+2026-04-24T22:25:18.908Z vite:time [32m0.38ms[39m [2m/src/index.css[22m
+2026-04-24T22:25:18.909Z vite:cache [memory] [2m/node_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m
+2026-04-24T22:25:18.909Z vite:time [32m0.07ms[39m [2m/node_modules/.vite/deps/react-dom_client.js?v=1ecf975f[22m
+2026-04-24T22:25:18.909Z vite:cache [memory] [2m/src/App.tsx[22m
+2026-04-24T22:25:18.909Z vite:time [32m0.09ms[39m [2m/src/App.tsx[22m
+2026-04-24T22:25:18.910Z vite:load [33m22.14ms[39m [fs] [2m/@vite/client[22m
+2026-04-24T22:25:18.914Z vite:resolve [32m0.11ms[39m [36m@vite/env[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:25:18.914Z vite:import-analysis [32m0.77ms[39m [2m[1 imports rewritten] [2mnode_modules/vite/dist/client/client.mjs[22m[2m[22m
+2026-04-24T22:25:18.914Z vite:transform [32m3.95ms[39m [2m/@vite/client[22m
+2026-04-24T22:25:18.919Z vite:time [33m29.97ms[39m [2m/@vite/client[22m
+2026-04-24T22:25:18.923Z vite:time [33m35.06ms[39m [2m/@vite/client[22m
+2026-04-24T22:25:18.924Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.925Z vite:time [32m0.42ms[39m [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.926Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.926Z vite:time [32m0.27ms[39m [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.927Z vite:load [33m31.73ms[39m [fs] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:18.931Z vite:load [33m36.40ms[39m [fs] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:25:18.937Z vite:load [33m41.93ms[39m [fs] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:25:18.937Z vite:load [33m41.86ms[39m [plugin] [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:18.939Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.939Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.939Z vite:import-analysis [32m1.69ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:18.939Z vite:transform [32m2.10ms[39m [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:18.940Z vite:load [33m44.73ms[39m [fs] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:18.947Z vite:load [31m52.51ms[39m [fs] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:18.957Z vite:load [31m62.44ms[39m [fs] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:25:18.963Z vite:load [31m68.36ms[39m [fs] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:18.976Z vite:load [31m80.84ms[39m [fs] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:25:18.980Z vite:load [31m92.83ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=1ecf975f[22m
+2026-04-24T22:25:18.988Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.988Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.988Z vite:import-analysis [32m3.98ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-PJEEZAML.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:18.988Z vite:transform [32m8.15ms[39m [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=1ecf975f[22m
+2026-04-24T22:25:18.992Z vite:time [31m65.63ms[39m [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=1ecf975f[22m
+2026-04-24T22:25:18.995Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:18.995Z vite:time [32m0.21ms[39m [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:18.996Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.996Z vite:time [32m0.13ms[39m [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:18.997Z vite:cache [memory] [2m/src/index.css[22m
+2026-04-24T22:25:18.997Z vite:time [32m0.13ms[39m [2m/src/index.css[22m
+2026-04-24T22:25:18.998Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:18.998Z vite:time [32m0.18ms[39m [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:19.000Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:25:19.000Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.000Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:19.000Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:19.000Z vite:hmr [self-accepts] [2msrc/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:19.000Z vite:import-analysis [32m0.75ms[39m [2m[4 imports rewritten] [2msrc/components/layout/BottomNav.tsx[22m[2m[22m
+2026-04-24T22:25:19.001Z vite:transform [31m74.00ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:19.001Z vite:time [32m3.08ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:19.005Z vite:load [31m109.61ms[39m [plugin] [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.015Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DRWLMN53.js?v=1ecf975f[22m
+2026-04-24T22:25:19.015Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:19.015Z vite:import-analysis [32m4.92ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:19.015Z vite:transform [33m10.25ms[39m [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.018Z vite:time [33m21.45ms[39m [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.021Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=1ecf975f[22m
+2026-04-24T22:25:19.021Z vite:time [32m0.71ms[39m [2m/node_modules/.vite/deps/chunk-PJEEZAML.js?v=1ecf975f[22m
+2026-04-24T22:25:19.025Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:19.026Z vite:time [32m0.47ms[39m [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:19.026Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.027Z vite:time [32m0.75ms[39m [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.029Z vite:load [31m115.39ms[39m [fs] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:25:19.030Z vite:import-analysis [32m0.07ms[39m [2m[no imports] [2mnode_modules/vite/dist/client/env.mjs[22m[2m[22m
+2026-04-24T22:25:19.030Z vite:transform [32m0.49ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:25:19.035Z vite:resolve [32m3.27ms[39m [36m../lib/supabase[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/lib/supabase.ts[22m
+2026-04-24T22:25:19.035Z vite:resolve [32m3.39ms[39m [36m../components/songs/SongCard[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:19.036Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:25:19.036Z vite:resolve [32m3.63ms[39m [36m@supabase/supabase-js[39m -> [2mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/@supabase_supabase-js.js?v=1ecf975f[22m
+2026-04-24T22:25:19.036Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.036Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.036Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.036Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.036Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.036Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.036Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:19.036Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.036Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:19.036Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.036Z vite:hmr [self-accepts] [2msrc/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:19.037Z vite:hmr [self-accepts] [2msrc/pages/Login.tsx[22m
+2026-04-24T22:25:19.037Z vite:hmr [self-accepts] [2msrc/pages/Songs.tsx[22m
+2026-04-24T22:25:19.037Z vite:import-analysis [32m5.26ms[39m [2m[7 imports rewritten] [2msrc/pages/SessionDetail.tsx[22m[2m[22m
+2026-04-24T22:25:19.037Z vite:import-analysis [32m5.30ms[39m [2m[5 imports rewritten] [2msrc/pages/Login.tsx[22m[2m[22m
+2026-04-24T22:25:19.037Z vite:import-analysis [32m5.30ms[39m [2m[7 imports rewritten] [2msrc/pages/Songs.tsx[22m[2m[22m
+2026-04-24T22:25:19.037Z vite:optimize-deps load [36mC:/ECOSAT/Proyectos AI/Proyectos AI/CantosCuu/node_modules/.vite/deps/@supabase_supabase-js.js[39m
+2026-04-24T22:25:19.037Z vite:import-analysis [32m5.48ms[39m [2m[1 imports rewritten] [2msrc/lib/supabase.ts[22m[2m[22m
+2026-04-24T22:25:19.039Z vite:transform [31m99.80ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:19.040Z vite:transform [31m63.74ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:25:19.040Z vite:transform [31m108.18ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:25:19.040Z vite:transform [31m102.79ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:25:19.041Z vite:time [33m10.20ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:19.041Z vite:time [33m37.29ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:25:19.041Z vite:time [33m43.78ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:25:19.044Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:25:19.044Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:25:19.044Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.045Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.045Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.045Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.045Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:19.045Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.045Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.045Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:19.045Z vite:hmr [self-accepts] [2msrc/pages/Sessions.tsx[22m
+2026-04-24T22:25:19.045Z vite:hmr [self-accepts] [2msrc/pages/Catalogs.tsx[22m
+2026-04-24T22:25:19.045Z vite:import-analysis [32m2.77ms[39m [2m[6 imports rewritten] [2msrc/pages/Sessions.tsx[22m[2m[22m
+2026-04-24T22:25:19.045Z vite:import-analysis [32m2.80ms[39m [2m[6 imports rewritten] [2msrc/pages/Catalogs.tsx[22m[2m[22m
+2026-04-24T22:25:19.047Z vite:transform [31m89.50ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:25:19.047Z vite:transform [31m83.70ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:19.048Z vite:time [33m17.34ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:25:19.050Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:25:19.050Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:25:19.050Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.050Z vite:import-analysis /node_modules/.vite/deps/react.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.050Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:19.050Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.050Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=1ecf975f[22m
+2026-04-24T22:25:19.050Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.050Z vite:hmr [self-accepts] [2msrc/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:19.050Z vite:import-analysis [32m1.13ms[39m [2m[6 imports rewritten] [2msrc/pages/AdminSongForm.tsx[22m[2m[22m
+2026-04-24T22:25:19.052Z vite:transform [31m104.08ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:19.061Z vite:cache [memory] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:19.061Z vite:time [32m0.31ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:19.061Z vite:cache [memory] [2m/src/lib/supabase.ts[22m
+2026-04-24T22:25:19.061Z vite:time [32m0.07ms[39m [2m/src/lib/supabase.ts[22m
+2026-04-24T22:25:19.062Z vite:cache [memory] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:19.062Z vite:time [32m0.12ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:19.062Z vite:cache [memory] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:25:19.062Z vite:time [32m0.09ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:25:19.062Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:25:19.062Z vite:time [32m0.04ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:25:19.063Z vite:cache [memory] [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:19.063Z vite:time [32m0.20ms[39m [2m/src/components/layout/BottomNav.tsx[22m
+2026-04-24T22:25:19.064Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:19.064Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:19.065Z vite:cache [memory] [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:25:19.065Z vite:time [32m0.34ms[39m [2m/src/pages/Songs.tsx[22m
+2026-04-24T22:25:19.068Z vite:cache [memory] [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:25:19.069Z vite:time [32m0.24ms[39m [2m/src/pages/Sessions.tsx[22m
+2026-04-24T22:25:19.070Z vite:load [33m33.10ms[39m [fs] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:19.076Z vite:cache [memory] [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:19.076Z vite:time [32m0.41ms[39m [2m/src/pages/SessionDetail.tsx[22m
+2026-04-24T22:25:19.077Z vite:cache [memory] [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:19.077Z vite:time [32m0.35ms[39m [2m/src/pages/AdminSongForm.tsx[22m
+2026-04-24T22:25:19.079Z vite:cache [memory] [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:19.079Z vite:time [32m0.19ms[39m [2m/src/pages/Catalogs.tsx[22m
+2026-04-24T22:25:19.080Z vite:load [33m42.80ms[39m [plugin] [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=1ecf975f[22m
+2026-04-24T22:25:19.084Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=1ecf975f[22m
+2026-04-24T22:25:19.084Z vite:import-analysis [32m2.62ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/@supabase_supabase-js.js?v=1ecf975f[22m[2m[22m
+2026-04-24T22:25:19.084Z vite:transform [32m4.21ms[39m [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=1ecf975f[22m
+2026-04-24T22:25:19.086Z vite:time [33m24.14ms[39m [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=1ecf975f[22m
+2026-04-24T22:25:19.090Z vite:cache [memory] [2m/@react-refresh[22m
+2026-04-24T22:25:19.090Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f needs interop
+2026-04-24T22:25:19.091Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=1ecf975f[22m
+2026-04-24T22:25:19.091Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=1ecf975f[22m
+2026-04-24T22:25:19.091Z vite:hmr [self-accepts] [2msrc/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:19.091Z vite:import-analysis [32m0.82ms[39m [2m[3 imports rewritten] [2msrc/components/songs/SongCard.tsx[22m[2m[22m
+2026-04-24T22:25:19.091Z vite:transform [33m21.31ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:19.091Z vite:time [33m24.45ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:19.093Z vite:cache [memory] [2m/src/pages/Login.tsx[22m
+2026-04-24T22:25:19.093Z vite:time [32m0.18ms[39m [2m/src/pages/Login.tsx[22m
+2026-04-24T22:25:19.093Z vite:cache [304] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:25:19.093Z vite:time [32m0.04ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-04-24T22:25:19.094Z vite:cache [memory] [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=1ecf975f[22m
+2026-04-24T22:25:19.095Z vite:time [32m0.89ms[39m [2m/node_modules/.vite/deps/@supabase_supabase-js.js?v=1ecf975f[22m
+2026-04-24T22:25:19.102Z vite:cache [memory] [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:19.102Z vite:time [32m0.33ms[39m [2m/src/components/songs/SongCard.tsx[22m
+2026-04-24T22:25:19.142Z vite:time [32m0.62ms[39m [2m/vite.svg[22m
+2026-04-24T22:25:19.146Z vite:time [32m0.22ms[39m [2m/vite.svg[22m
+2026-04-24T22:25:19.510Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:19.510Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:19.914Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:19.914Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:20.320Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:20.320Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:20.727Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:20.727Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:21.131Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:21.131Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:21.535Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:21.535Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:21.938Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:21.938Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:22.345Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:22.345Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:22.797Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:22.797Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:23.202Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:23.202Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:23.638Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:23.638Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:24.043Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:24.043Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:24.446Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:24.446Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:24.894Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:24.894Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:25.287Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:25.287Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:25.688Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:25.688Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:26.095Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:26.096Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:26.499Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:26.499Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:26.901Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:26.901Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:27.292Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:27.292Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:27.695Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:27.695Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:28.100Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:28.100Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:28.506Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:28.506Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:28.907Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:28.907Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:29.313Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:29.314Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:29.704Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:29.704Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:30.107Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:30.107Z vite:hmr [no modules matched] [2mvite_debug.txt[22m
+2026-04-24T22:25:30.497Z vite:hmr [file change] [2mvite_debug.txt[22m
+2026-04-24T22:25:30.497Z vite:hmr [no modules matched] [2mvite_debug.txt[22m

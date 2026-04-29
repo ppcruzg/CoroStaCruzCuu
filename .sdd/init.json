@@ -1,0 +1,18 @@
+{
+  "project": "CantosCuu",
+  "stack": {
+    "detected": "Greenfield",
+    "hints": ["Supabase"],
+    "language": "Pending"
+  },
+  "testing": {
+    "framework": null,
+    "command": null,
+    "strict_tdd": false
+  },
+  "preferences": {
+    "execution_mode": "auto",
+    "artifact_store": "openspec"
+  },
+  "initialized_at": "2026-04-24T15:12:00-06:00"
+}
