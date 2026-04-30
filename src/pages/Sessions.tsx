@@ -154,6 +154,20 @@ export function Sessions() {
           <button
             onClick={() => {
               const now = new Date();
+              const first = now.getDate() - now.getDay() + 7;
+              const last = first + 6;
+              const firstDay = new Date(new Date().setDate(first)).toISOString().split('T')[0];
+              const lastDay = new Date(new Date().setDate(last)).toISOString().split('T')[0];
+              setStartDate(firstDay);
+              setEndDate(lastDay);
+            }}
+            className="whitespace-nowrap px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold border border-blue-100 hover:bg-blue-100 transition-colors"
+          >
+            PRÓXIMA SEMANA
+          </button>
+          <button
+            onClick={() => {
+              const now = new Date();
               const first = now.getDate() - now.getDay();
               const last = first + 6;
               const firstDay = new Date(now.setDate(first)).toISOString().split('T')[0];
