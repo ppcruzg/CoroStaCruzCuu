@@ -4,8 +4,10 @@ import { ChevronLeft, Info, Play, ListMusic, Plus, Search, X, Filter, Check, Fil
 import { supabase } from '../lib/supabase';
 import { Sesion, Canto, TipoCanto, TiempoLiturgico } from '../types';
 import { SongCard } from '../components/songs/SongCard';
+import { useAuth } from '../contexts/AuthContext';
 
 export function SessionDetail() {
+  const { isAdmin } = useAuth();
   const { id } = useParams();
   const navigate = useNavigate();
   const [session, setSession] = useState<Sesion | null>(null);
@@ -188,22 +190,58 @@ export function SessionDetail() {
     }
   }
 
+  async function handleTogglePublish() {
+    if (!session) return;
+    try {
+      const newStatus = !session.publicada;
+      const { error } = await supabase
+        .from('sesiones')
+        .update({ publicada: newStatus })
+        .eq('id', id);
+
+      if (error) throw error;
+      setSession({ ...session, publicada: newStatus });
+    } catch (err) {
+      console.error('Error toggling publish status:', err);
+      alert('Error al actualizar el estado de la sesión');
+    }
+  }
+
   if (loading) return <div className="p-10 text-center text-gray-400">Cargando celebración...</div>;
   if (!session) return <div className="p-10 text-center text-red-500">Sesión no encontrada</div>;
 
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Header Contextual */}
-      <div className="bg-white border-b border-gray-100 p-4 sticky top-[60px] z-30 flex items-center gap-3">
-        <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-          <ChevronLeft size={24} className="text-gray-600" />
-        </button>
-        <div>
-          <h2 className="font-bold text-gray-800 leading-tight">{session.nombre}</h2>
-          <p className="text-xs text-gray-500">
-            {new Date(session.fecha).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })} • {songs.length} cantos
-          </p>
+      <div className="bg-white border-b border-gray-100 p-4 sticky top-[60px] z-30 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <ChevronLeft size={24} className="text-gray-600" />
+          </button>
+          <div>
+            <h2 className="font-bold text-gray-800 leading-tight">{session.nombre}</h2>
+            <p className="text-xs text-gray-500">
+              {new Date(session.fecha).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })} • {songs.length} cantos
+            </p>
+          </div>
         </div>
+
+        {isAdmin && (
+          <button
+            onClick={handleTogglePublish}
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+              session.publicada 
+                ? 'bg-green-50 text-green-700 border border-green-100' 
+                : 'bg-amber-50 text-amber-700 border border-amber-100'
+            }`}
+          >
+            {session.publicada ? (
+              <><Check size={14} /> Publicada</>
+            ) : (
+              <><FileText size={14} /> Publicar</>
+            )}
+          </button>
+        )}
       </div>
 
       <div className="p-4 space-y-6">
@@ -221,12 +259,14 @@ export function SessionDetail() {
             <div className="flex items-center gap-2 text-gray-400 font-bold text-xs uppercase tracking-widest">
               <ListMusic size={14} /> Orden de la Celebración
             </div>
-            <button 
-              onClick={() => setIsSearchModalOpen(true)}
-              className="flex items-center gap-1 text-blue-600 font-bold text-xs bg-blue-50 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors"
-            >
-              <Plus size={14} /> Añadir Canto
-            </button>
+            {isAdmin && (
+              <button 
+                onClick={() => setIsSearchModalOpen(true)}
+                className="flex items-center gap-1 text-blue-600 font-bold text-xs bg-blue-50 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors"
+              >
+                <Plus size={14} /> Añadir Canto
+              </button>
+            )}
           </div>
           
           <div className="space-y-3">
@@ -240,7 +280,7 @@ export function SessionDetail() {
                 <SongCard 
                   song={song} 
                   hideEdit={true} 
-                  onRemove={() => handleRemoveCantoFromSession(song.id)}
+                  onRemove={isAdmin ? () => handleRemoveCantoFromSession(song.id) : undefined}
                 />
                 
                 {/* Nota específica del canto en esta sesión */}

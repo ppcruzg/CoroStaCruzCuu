@@ -3,8 +3,10 @@ import { Calendar as CalendarIcon, Plus, Clock, MapPin, X } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { Sesion } from '../types';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 export function Sessions() {
+  const { isAdmin } = useAuth();
   const [sessions, setSessions] = useState<Sesion[]>([]);
   const [loading, setLoading] = useState(true);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -71,12 +73,14 @@ export function Sessions() {
     <div className="p-4 space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-gray-800">Próximas Sesiones</h2>
-        <button 
-          onClick={() => setIsCreateModalOpen(true)}
-          className="bg-blue-600 text-white p-2 rounded-xl shadow-lg hover:bg-blue-700 transition-all active:scale-95"
-        >
-          <Plus size={24} />
-        </button>
+        {isAdmin && (
+          <button 
+            onClick={() => setIsCreateModalOpen(true)}
+            className="bg-blue-600 text-white p-2 rounded-xl shadow-lg hover:bg-blue-700 transition-all active:scale-95"
+          >
+            <Plus size={24} />
+          </button>
+        )}
       </div>
 
       <div className="space-y-4">
@@ -125,12 +129,14 @@ export function Sessions() {
           <div className="text-center py-16 px-6 bg-white rounded-3xl border-2 border-dashed border-gray-100 flex flex-col items-center">
             <CalendarIcon size={48} className="text-gray-200 mb-4" />
             <p className="text-gray-500 font-medium">No hay sesiones programadas</p>
-            <button 
-              onClick={() => setIsCreateModalOpen(true)}
-              className="mt-4 text-blue-600 font-bold text-sm"
-            >
-              Crear primera sesión
-            </button>
+            {isAdmin && (
+              <button 
+                onClick={() => setIsCreateModalOpen(true)}
+                className="mt-4 text-blue-600 font-bold text-sm"
+              >
+                Crear primera sesión
+              </button>
+            )}
           </div>
         )}
       </div>

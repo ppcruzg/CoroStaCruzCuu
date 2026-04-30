@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
-import { Settings, Music } from 'lucide-react';
+import { Settings, Music, Users as UsersIcon } from 'lucide-react';
 import { supabase } from './lib/supabase';
+import { useAuth } from './contexts/AuthContext';
 import { BottomNav } from './components/layout/BottomNav';
 import { Songs } from './pages/Songs';
 import { Sessions } from './pages/Sessions';
@@ -10,39 +10,45 @@ import { LiveSession } from './pages/LiveSession';
 import { AdminSongForm } from './pages/AdminSongForm';
 import { EditSongForm } from './pages/EditSongForm';
 import { Catalogs } from './pages/Catalogs';
+import { Users } from './pages/Users';
 import { Login } from './pages/Login';
 
-const Placeholder = ({ title }: { title: string }) => (
-  <div className="p-8 text-center min-h-[70vh] flex flex-col justify-center items-center">
-    <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
-    <p className="mt-4 text-gray-500">Esta sección está en desarrollo.</p>
-    {title === 'Mi Perfil' && (
-      <Link 
-        to="/admin/catalogos"
-        className="mt-8 bg-white border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-2xl font-bold flex items-center gap-2 hover:bg-blue-50 transition-colors shadow-sm"
-      >
-        <Settings size={20} /> Gestionar Catálogos
-      </Link>
-    )}
-  </div>
-);
+const Placeholder = ({ title }: { title: string }) => {
+  const { isAdmin } = useAuth();
+  return (
+    <div className="p-8 text-center min-h-[70vh] flex flex-col justify-center items-center">
+      <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
+      <p className="mt-4 text-gray-500">Esta sección está en desarrollo.</p>
+      {title === 'Mi Perfil' && isAdmin && (
+        <div className="flex flex-col gap-3 mt-8">
+          <Link 
+            to="/admin/usuarios"
+            className="bg-white border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-50 transition-colors shadow-sm"
+          >
+            <UsersIcon size={20} /> Gestionar Usuarios
+          </Link>
+          <Link 
+            to="/admin/catalogos"
+            className="bg-white border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors shadow-sm"
+          >
+            <Settings size={20} /> Gestionar Catálogos
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const AdminRoute = ({ children }: { children: React.ReactNode }) => {
+  const { isAdmin } = useAuth();
+  if (!isAdmin) {
+    return <Navigate to="/cantos" replace />;
+  }
+  return <>{children}</>;
+};
 
 function App() {
-  const [session, setSession] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setLoading(false);
-    });
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
+  const { session, loading } = useAuth();
 
   if (loading) {
     return (
@@ -78,9 +84,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/cantos" replace />} />
             <Route path="/cantos" element={<Songs />} />
-            <Route path="/admin/nuevo-canto" element={<AdminSongForm />} />
-            <Route path="/admin/editar-canto/:id" element={<EditSongForm />} />
-            <Route path="/admin/catalogos" element={<Catalogs />} />
+            <Route path="/admin/nuevo-canto" element={<AdminRoute><AdminSongForm /></AdminRoute>} />
+            <Route path="/admin/editar-canto/:id" element={<AdminRoute><EditSongForm /></AdminRoute>} />
+            <Route path="/admin/catalogos" element={<AdminRoute><Catalogs /></AdminRoute>} />
+            <Route path="/admin/usuarios" element={<AdminRoute><Users /></AdminRoute>} />
             <Route path="/sesiones" element={<Sessions />} />
             <Route path="/sesiones/:id" element={<SessionDetail />} />
             <Route path="/sesiones/:id/live" element={<LiveSession />} />

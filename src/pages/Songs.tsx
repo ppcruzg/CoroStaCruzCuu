@@ -4,8 +4,10 @@ import { supabase } from '../lib/supabase';
 import { Canto, TiempoLiturgico, TipoCanto } from '../types';
 import { SongCard, SongCardTheme } from '../components/songs/SongCard';
 import { Link, useSearchParams } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 export function Songs() {
+  const { isAdmin } = useAuth();
   const [songs, setSongs] = useState<Canto[]>([]);
   const [loading, setLoading] = useState(true);
   const [tiempos, setTiempos] = useState<TiempoLiturgico[]>([]);
@@ -374,13 +376,15 @@ export function Songs() {
       </div>
 
       {/* FAB */}
-      <Link
-        to="/admin/nuevo-canto"
-        className="fixed bottom-24 right-5 bg-blue-600 text-white p-4 rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
-      >
-        <Plus size={22} />
-        <span className="text-sm font-bold pr-1">Nuevo Canto</span>
-      </Link>
+      {isAdmin && (
+        <Link
+          to="/admin/nuevo-canto"
+          className="fixed bottom-24 right-5 bg-blue-600 text-white p-4 rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+        >
+          <Plus size={22} />
+          <span className="text-sm font-bold pr-1">Nuevo Canto</span>
+        </Link>
+      )}
     </div>
   );
 }

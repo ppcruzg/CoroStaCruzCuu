@@ -1,6 +1,7 @@
 import { FileText, Music as MusicIcon, Pencil, Trash2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Canto } from '../../types';
+import { useAuth } from '../../contexts/AuthContext';
 
 export type SongCardTheme = 'default' | 'blue' | 'green' | 'amber';
 
@@ -21,6 +22,7 @@ const themeClasses: Record<SongCardTheme, string> = {
 
 export function SongCard({ song, onClick, theme = 'default', hideEdit = false, onRemove }: SongCardProps) {
   const navigate = useNavigate();
+  const { isAdmin } = useAuth();
 
   const currentThemeClasses = themeClasses[theme];
 
@@ -76,7 +78,7 @@ export function SongCard({ song, onClick, theme = 'default', hideEdit = false, o
         </a>
 
         {/* Edit */}
-        {!hideEdit && (
+        {(!hideEdit && isAdmin) && (
           <button
             onClick={(e) => {
               e.stopPropagation();

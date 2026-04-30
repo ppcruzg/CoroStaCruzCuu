@@ -7,6 +7,7 @@ export interface Perfil {
   rol: UserRole;
   avatar_url?: string;
   activo: boolean;
+  email?: string;
 }
 
 export interface Canto {
