@@ -111,7 +111,7 @@ export function Sessions() {
               <div className="flex flex-wrap gap-4 text-sm text-gray-500">
                 <div className="flex items-center gap-1.5">
                   <CalendarIcon size={16} className="text-blue-500" />
-                  <span>{new Date(session.fecha).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}</span>
+                  <span>{new Date(session.fecha + 'T12:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Clock size={16} className="text-blue-500" />

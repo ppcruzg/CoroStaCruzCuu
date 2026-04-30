@@ -221,7 +221,7 @@ export function SessionDetail() {
           <div>
             <h2 className="font-bold text-gray-800 leading-tight">{session.nombre}</h2>
             <p className="text-xs text-gray-500">
-              {new Date(session.fecha).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })} • {songs.length} cantos
+              {new Date(session.fecha + 'T12:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })} • {songs.length} cantos
             </p>
           </div>
         </div>
