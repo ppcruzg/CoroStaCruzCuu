@@ -28,8 +28,12 @@ export function Login() {
     <div className="min-h-[80vh] flex flex-col items-center justify-center p-6 bg-gray-50">
       <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
         <div className="flex flex-col items-center mb-8">
-          <div className="bg-blue-600 p-4 rounded-2xl shadow-lg shadow-blue-200 mb-4">
-            <LogIn className="text-white" size={32} />
+          <div className="mb-6">
+            <img 
+              src="/logos/corologogde.png" 
+              alt="Logo Coro" 
+              className="w-32 h-32 object-contain"
+            />
           </div>
           <h2 className="text-2xl font-bold text-gray-800">CantoManager</h2>
           <p className="text-gray-500 text-center mt-2">Ingresa tus credenciales para acceder al catálogo litúrgico.</p>

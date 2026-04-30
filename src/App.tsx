@@ -67,9 +67,11 @@ function App() {
       <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
         <header className="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-5 py-4 sticky top-0 z-40 shadow-lg shadow-blue-900/20 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="bg-white/20 p-1.5 rounded-lg">
-              <Music size={18} className="text-white" />
-            </div>
+            <img 
+              src="/logos/corologo.png" 
+              alt="Logo Coro" 
+              className="w-8 h-8 object-contain"
+            />
             <h1 className="text-lg font-bold tracking-tight">CantoManager</h1>
           </div>
           <button
