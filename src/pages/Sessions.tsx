@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Calendar as CalendarIcon, Plus, Clock, MapPin, X } from 'lucide-react';
+import { Calendar as CalendarIcon, Plus, Clock, MapPin, X, Search } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { Sesion } from '../types';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,8 @@ export function Sessions() {
   const [newSessionName, setNewSessionName] = useState('');
   const [newSessionDate, setNewSessionDate] = useState('');
   const [isCreating, setIsCreating] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filterDate, setFilterDate] = useState('');
 
   useEffect(() => {
     fetchSessions();
@@ -69,8 +71,18 @@ export function Sessions() {
     }
   }
 
+  const filteredSessions = sessions.filter(session => {
+    const matchesSearch = 
+      session.nombre.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (session.descripcion?.toLowerCase() || '').includes(searchQuery.toLowerCase());
+    
+    const matchesDate = !filterDate || session.fecha === filterDate;
+    
+    return matchesSearch && matchesDate;
+  });
+
   return (
-    <div className="p-4 space-y-6">
+    <div className="p-4 pb-24 space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-gray-800">Próximas Sesiones</h2>
         {isAdmin && (
@@ -83,44 +95,84 @@ export function Sessions() {
         )}
       </div>
 
+      {/* Filtros */}
+      <div className="flex flex-col gap-3">
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+          <input
+            type="text"
+            placeholder="Buscar por nombre o descripción..."
+            className="w-full pl-11 pr-4 py-3 rounded-2xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm shadow-sm"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1">
+            <CalendarIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+            <input
+              type="date"
+              className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm shadow-sm"
+              value={filterDate}
+              onChange={(e) => setFilterDate(e.target.value)}
+            />
+          </div>
+          {filterDate && (
+            <button 
+              onClick={() => setFilterDate('')}
+              className="p-2.5 text-gray-400 hover:text-red-500 bg-white border border-gray-200 rounded-xl shadow-sm transition-all"
+              title="Limpiar fecha"
+            >
+              <X size={18} />
+            </button>
+          )}
+        </div>
+      </div>
+
       <div className="space-y-4">
         {loading ? (
           <div className="text-center py-10 text-gray-400 font-medium">Cargando sesiones...</div>
-        ) : sessions.length > 0 ? (
-          sessions.map((session) => (
+        ) : filteredSessions.length > 0 ? (
+          filteredSessions.map((session) => (
             <Link
               key={session.id}
               to={`/sesiones/${session.id}`}
-              className="block bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-300 transition-all group"
+              className="block bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-300 transition-all group"
             >
-              <div className="flex justify-between items-start mb-3">
-                <div className="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
+              <div className="flex justify-between items-start mb-2">
+                <div className="bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-lg text-[10px] font-bold uppercase tracking-wider">
                   Misa Dominical
                 </div>
                 {!session.publicada && (
-                  <span className="text-[10px] bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-bold">
+                  <span className="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-bold">
                     Borrador
                   </span>
                 )}
               </div>
               
-              <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-lg font-bold text-gray-800 mb-1 group-hover:text-blue-600 transition-colors truncate">
                 {session.nombre}
               </h3>
+
+              {session.descripcion && (
+                <p className="text-xs text-gray-500 mb-2 line-clamp-1 italic">
+                  {session.descripcion}
+                </p>
+              )}
               
-              <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                <div className="flex items-center gap-1.5">
-                  <CalendarIcon size={16} className="text-blue-500" />
-                  <span>{new Date(session.fecha + 'T12:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}</span>
+              <div className="flex flex-wrap gap-3 text-[11px] text-gray-500">
+                <div className="flex items-center gap-1">
+                  <CalendarIcon size={14} className="text-blue-500" />
+                  <span>{new Date(session.fecha + 'T12:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock size={16} className="text-blue-500" />
+                <div className="flex items-center gap-1">
+                  <Clock size={14} className="text-blue-500" />
                   <span>12:00 PM</span>
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between text-xs font-medium text-gray-400">
-                <span>12 cantos seleccionados</span>
+              <div className="mt-3 pt-3 border-t border-gray-50 flex items-center justify-between text-[10px] font-medium text-gray-400 uppercase tracking-wide">
+                <span>Sesión Activa</span>
                 <span className="text-blue-500 font-bold">Ver detalle →</span>
               </div>
             </Link>
@@ -128,8 +180,15 @@ export function Sessions() {
         ) : (
           <div className="text-center py-16 px-6 bg-white rounded-3xl border-2 border-dashed border-gray-100 flex flex-col items-center">
             <CalendarIcon size={48} className="text-gray-200 mb-4" />
-            <p className="text-gray-500 font-medium">No hay sesiones programadas</p>
-            {isAdmin && (
+            <p className="text-gray-500 font-medium">No se encontraron sesiones</p>
+            {(searchQuery || filterDate) ? (
+               <button 
+                 onClick={() => {setSearchQuery(''); setFilterDate('');}}
+                 className="mt-4 text-blue-600 font-bold text-sm"
+               >
+                 Limpiar filtros
+               </button>
+            ) : isAdmin && (
               <button 
                 onClick={() => setIsCreateModalOpen(true)}
                 className="mt-4 text-blue-600 font-bold text-sm"
