@@ -14,7 +14,8 @@ export function Sessions() {
   const [newSessionDate, setNewSessionDate] = useState('');
   const [isCreating, setIsCreating] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filterDate, setFilterDate] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   useEffect(() => {
     fetchSessions();
@@ -76,9 +77,10 @@ export function Sessions() {
       session.nombre.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (session.descripcion?.toLowerCase() || '').includes(searchQuery.toLowerCase());
     
-    const matchesDate = !filterDate || session.fecha === filterDate;
+    const matchesStartDate = !startDate || session.fecha >= startDate;
+    const matchesEndDate = !endDate || session.fecha <= endDate;
     
-    return matchesSearch && matchesDate;
+    return matchesSearch && matchesStartDate && matchesEndDate;
   });
 
   return (
@@ -109,21 +111,33 @@ export function Sessions() {
         </div>
         <div className="flex items-center gap-2">
           <div className="relative flex-1">
-            <CalendarIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+            <CalendarIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={14} />
             <input
               type="date"
-              className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm shadow-sm"
-              value={filterDate}
-              onChange={(e) => setFilterDate(e.target.value)}
+              className="w-full pl-10 pr-2 py-2 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-[11px] shadow-sm"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+              placeholder="Inicio"
             />
           </div>
-          {filterDate && (
+          <div className="text-gray-300 text-xs">al</div>
+          <div className="relative flex-1">
+            <CalendarIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={14} />
+            <input
+              type="date"
+              className="w-full pl-10 pr-2 py-2 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-[11px] shadow-sm"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+              placeholder="Fin"
+            />
+          </div>
+          {(startDate || endDate) && (
             <button 
-              onClick={() => setFilterDate('')}
-              className="p-2.5 text-gray-400 hover:text-red-500 bg-white border border-gray-200 rounded-xl shadow-sm transition-all"
-              title="Limpiar fecha"
+              onClick={() => {setStartDate(''); setEndDate('');}}
+              className="p-2 text-gray-400 hover:text-red-500 bg-white border border-gray-200 rounded-xl shadow-sm transition-all"
+              title="Limpiar rango"
             >
-              <X size={18} />
+              <X size={16} />
             </button>
           )}
         </div>
@@ -181,9 +195,9 @@ export function Sessions() {
           <div className="text-center py-16 px-6 bg-white rounded-3xl border-2 border-dashed border-gray-100 flex flex-col items-center">
             <CalendarIcon size={48} className="text-gray-200 mb-4" />
             <p className="text-gray-500 font-medium">No se encontraron sesiones</p>
-            {(searchQuery || filterDate) ? (
+            {(searchQuery || startDate || endDate) ? (
                <button 
-                 onClick={() => {setSearchQuery(''); setFilterDate('');}}
+                 onClick={() => {setSearchQuery(''); setStartDate(''); setEndDate('');}}
                  className="mt-4 text-blue-600 font-bold text-sm"
                >
                  Limpiar filtros
