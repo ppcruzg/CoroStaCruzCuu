@@ -111,35 +111,81 @@ export function Sessions() {
         </div>
         <div className="flex items-center gap-2">
           <div className="relative flex-1">
-            <CalendarIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={14} />
+            <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={14} />
             <input
               type="date"
-              className="w-full pl-10 pr-2 py-2 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-[11px] shadow-sm"
+              className="w-full pl-9 pr-2 py-2 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-[11px] shadow-sm"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              placeholder="Inicio"
             />
           </div>
-          <div className="text-gray-300 text-xs">al</div>
+          <div className="text-gray-300 text-[10px] font-bold">AL</div>
           <div className="relative flex-1">
-            <CalendarIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={14} />
+            <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={14} />
             <input
               type="date"
-              className="w-full pl-10 pr-2 py-2 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-[11px] shadow-sm"
+              className="w-full pl-9 pr-2 py-2 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-[11px] shadow-sm"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              placeholder="Fin"
             />
           </div>
           {(startDate || endDate) && (
             <button 
               onClick={() => {setStartDate(''); setEndDate('');}}
               className="p-2 text-gray-400 hover:text-red-500 bg-white border border-gray-200 rounded-xl shadow-sm transition-all"
-              title="Limpiar rango"
             >
               <X size={16} />
             </button>
           )}
+        </div>
+
+        {/* Botones de Acceso Rápido */}
+        <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+          <button
+            onClick={() => {
+              const today = new Date().toISOString().split('T')[0];
+              setStartDate(today);
+              setEndDate(today);
+            }}
+            className="whitespace-nowrap px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold border border-blue-100 hover:bg-blue-100 transition-colors"
+          >
+            HOY
+          </button>
+          <button
+            onClick={() => {
+              const now = new Date();
+              const first = now.getDate() - now.getDay();
+              const last = first + 6;
+              const firstDay = new Date(now.setDate(first)).toISOString().split('T')[0];
+              const lastDay = new Date(now.setDate(last)).toISOString().split('T')[0];
+              setStartDate(firstDay);
+              setEndDate(lastDay);
+            }}
+            className="whitespace-nowrap px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold border border-blue-100 hover:bg-blue-100 transition-colors"
+          >
+            ESTA SEMANA
+          </button>
+          <button
+            onClick={() => {
+              const now = new Date();
+              const firstDay = new Date(now.getFullYear(), now.getMonth(), 1).toISOString().split('T')[0];
+              const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0).toISOString().split('T')[0];
+              setStartDate(firstDay);
+              setEndDate(lastDay);
+            }}
+            className="whitespace-nowrap px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold border border-blue-100 hover:bg-blue-100 transition-colors"
+          >
+            ESTE MES
+          </button>
+          <button
+            onClick={() => {
+              setStartDate('');
+              setEndDate('');
+            }}
+            className="whitespace-nowrap px-4 py-1.5 rounded-full bg-gray-50 text-gray-600 text-[10px] font-bold border border-gray-100 hover:bg-gray-100 transition-colors"
+          >
+            TODO
+          </button>
         </div>
       </div>
 
