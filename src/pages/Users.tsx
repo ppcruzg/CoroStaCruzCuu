@@ -126,7 +126,7 @@ export function Users() {
       );
 
       const { data, error } = await tempClient.auth.signUp({
-        email: newUserEmail,
+        email: newUserEmail.trim(),
         password: newUserPassword,
         options: {
           data: {
@@ -177,10 +177,10 @@ export function Users() {
       if (profileError) throw profileError;
 
       // Update Email and/or Password if provided using RPC
-      if (editUserPassword || (editUserEmail && editUserEmail !== editingUser.email)) {
+      if (editUserPassword || (editUserEmail.trim() && editUserEmail.trim() !== editingUser.email)) {
         const { error: authUpdateError } = await supabase.rpc('admin_update_user', {
           target_user_id: editingUser.id,
-          new_email: editUserEmail !== editingUser.email ? editUserEmail : null,
+          new_email: editUserEmail.trim() !== editingUser.email ? editUserEmail.trim() : null,
           new_password: editUserPassword || null
         });
 
